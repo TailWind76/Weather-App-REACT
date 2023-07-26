@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# EN
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ToDo React App
 
-## Available Scripts
+## Description
+This application is created solely for frontend demonstration purposes and does not include any backend component. It showcases the client-side part only, developed using modern web technologies and frameworks.
 
-In the project directory, you can run:
+## Goal
+The purpose of this project is to demonstrate interface development skills, user experience improvement, and data handling on the client-side.
 
-### `npm start`
+## Limitations
+Please note that this is just a frontend demo, and there is no backend server component involved. All data processing presented in the application is performed locally on the client device using test data or placeholders.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to Use
+You can easily view our demo application by simply following the link (View Demo: https://tailwind76.github.io/ToDo-React-App/) or by cloning the repository and opening the application in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Feedback and Contribution
+I appreciate your interest in my project. If you have any questions, suggestions, or remarks, please create an Issue in the repository.
 
-### `npm test`
+For all inquiries and proposals, please contact me via email: vladislavdokucaev8@gmail.com.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# RU
 
-### Analyzing the Bundle Size
+# ToDo React приложение
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Описание
+Это приложение создано исключительно для демонстрации фронтенда и не предусматривает наличие бэкенд-составляющей. Здесь представлена только клиентская часть, которая разработана с использованием современных веб-технологий и фреймворков.
 
-### Making a Progressive Web App
+## Цель
+Цель этого проекта - продемонстрировать навыки разработки интерфейсов, улучшения пользовательского опыта и обращения с данными на клиентской стороне. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Ограничения
+Обратите внимание, что это только фронтенд-демонстрация, и здесь не предусмотрена бэкенд-серверная часть. Вся обработка данных, представленных в приложении, выполняется локально на клиентском устройстве с использованием тестовых данных или заглушек.
 
-### Advanced Configuration
+## Как использовать
+Вы можете легко просмотреть наше демонстрационное приложение, просто перейдя по ссылке (Просмотреть Demo: https://tailwind76.github.io/ToDo-React-App/) или клонируя репозиторий и открыв приложение в своем браузере
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Обратная связь и вклад
+Я ценю ваш интерес к моему проекту. Если у вас есть какие-либо вопросы, предложения или замечания, пожалуйста, создайте Issue в репозитории 
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+По всем вопросам и предложениям писать на почту: vladislavdokucaev8@gmail.com
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
