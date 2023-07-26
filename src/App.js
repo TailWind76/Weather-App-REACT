@@ -9,7 +9,7 @@ import MapComponent from './components/map';
 function App() {
   return (
     <div className='App' >
-    <Router>
+      <Router basename="/Weather-App-REACT">
       <StartPage />
       <Sidebar/>
       <Routes>
