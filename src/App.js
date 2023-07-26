@@ -9,11 +9,11 @@ import MapComponent from './components/map';
 function App() {
   return (
     <div className='App' >
-      <Router basename="/">
+      <Router basename="/Weather-App-REACT/">
       <StartPage />
       <Sidebar/>
       <Routes>
-        <Route path='/' element={<Homepage/>}/>
+        <Route path='/Weather-App-REACT/' element={<Homepage/>}/>
         <Route path='/settings' element={<Settings/>}/>
         <Route path='/map' element={<MapComponent/>}></Route>
       </Routes>
