@@ -13,7 +13,7 @@ function App() {
       <StartPage />
       <Sidebar/>
       <Routes>
-        <Route path='/Weather-App-REACT/' element={<Homepage/>}/>
+        <Route path='/' element={<Homepage/>}/>
         <Route path='/settings' element={<Settings/>}/>
         <Route path='/map' element={<MapComponent/>}></Route>
       </Routes>
