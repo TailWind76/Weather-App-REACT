@@ -14,7 +14,7 @@ function Sidebar(){
 
             <nav className='sidebar__navigation'>
 
-                <Link  className='nav_item' to='/'>   <div > 
+                <Link  className='nav_item' to='/Weather-App-REACT'>   <div > 
                         <img src={weather}/>
                         <p>Weather</p>
 
