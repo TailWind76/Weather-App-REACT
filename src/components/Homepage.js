@@ -412,7 +412,7 @@ function Homepage() {
       </div>
 
       <div className='weekForecast'>
-  <p className='weekForecast_title'>6-DAY FORECAST</p>
+  <p className='weekForecast_title'>5-DAY FORECAST</p>
   {fiveDayForecast.map((forecastItem, index) => (
     <div className='weekForecast_item' key={index}>
       <p className='weekForecast_item__day'>
