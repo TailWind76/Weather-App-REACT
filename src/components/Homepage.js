@@ -28,7 +28,9 @@ function Homepage() {
   const [sunsetTime, setSunsetTime] = useState(null);
   const [humidity, setHumidity] = useState(null);
   const [show, setShowed] = useState(false);
+ 
 
+ 
 
   useEffect(() => {
     const apiKey = '9f5b903ee57126cbe1b2c6ccd4ef62ea';
@@ -97,6 +99,8 @@ function Homepage() {
     event.preventDefault();
   };
 
+  
+
   function getWeatherIcon(weatherType) {
     switch (weatherType) {
       case 'Rain':
@@ -159,33 +163,7 @@ function Homepage() {
   };
   
 
-  const convertSunsetTimeTo24HourFormat = (sunsetTime) => {
-    if (sunsetTime) {
-      const date = new Date(sunsetTime * 1000);
-      const hours = date.getHours();
-      const minutes = date.getMinutes();
-      return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
-    }
-    return '';
-  };
   
-
-  const convertSunsetTimeTo12HourFormat = (sunsetTime) => {
-    if (sunsetTime) {
-      const date = new Date(sunsetTime * 1000);
-      let hours = date.getHours();
-      const minutes = date.getMinutes();
-      const amOrPm = hours >= 12 ? 'PM' : 'AM';
-      hours = hours % 12 || 12;
-      return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${amOrPm}`;
-    }
-    return '';
-  };
-
-  const renderSunsetTime = (sunsetTime) => {
-    const timeFormat = localStorage.getItem('timeFormat');
-    return timeFormat === '24-hour' ? convertSunsetTimeTo24HourFormat(sunsetTime) : convertSunsetTimeTo12HourFormat(sunsetTime);
-  };
 
 
   const convertTemperatureToFahrenheit = (celsius) => {
@@ -312,6 +290,23 @@ function Homepage() {
   };
   
 
+  const renderSunsetTime = (sunsetTime) => {
+    const timeFormat = localStorage.getItem('timeFormat') || '12-hours';
+    const time = new Date(sunsetTime);
+    let hours = time.getHours();
+    let minutes = time.getMinutes();
+
+    if (timeFormat === '12-hours') {
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12 || 12;
+      return `${hours}:${minutes < 10 ? '0' : ''}${minutes} ${ampm}`;
+    } else {
+      return `${hours}:${minutes < 10 ? '0' : ''}${minutes}`;
+    }
+  }
+
+  const timeFormat = localStorage.getItem("timeFormat");
+
 
 
   
@@ -343,7 +338,7 @@ function Homepage() {
             {forecastData.map((forecastItem, index) => (
               <div className='forecast_today__item' key={index}>
                 <p className='forecast_today__time'>
-                  {new Date(forecastItem.dt * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                {new Date(forecastItem.dt * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: timeFormat === '12-hours' })}
                 </p>
                 <img src={getWeatherIcon(forecastItem.weather[0].main)} alt='Weather Icon' />
                 <p className='forecast_today__temperature'>{getForecastTemperatureValue(forecastItem.main.temp)}</p>
@@ -450,7 +445,6 @@ function Homepage() {
 
 
 export default Homepage;
-
 
 
 

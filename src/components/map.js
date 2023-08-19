@@ -137,6 +137,8 @@ function MapComponent() {
   return (
     <>
       <section className="map_wrapper">
+        
+        <h2 className='mobile_title'>Map</h2>
         <form className="City_search__form map_search" onSubmit={(e) => e.preventDefault()}>
           <input
             name="city_value"

@@ -1,21 +1,25 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+
 const Settings = () => {
     const [notificationOn, setNotificationOn] = useState(false);
     const [timeisOn, setTimeIsOn] = useState(false);
-  
+    const [timeFormat, setTimeFormat] = useState(localStorage.getItem('timeFormat') || '12-hours');
+
     const handleToggleNotification = () => {
-        setNotificationOn((prevIsOn) => !prevIsOn);
+        setNotificationOn(!notificationOn);
     }
 
+
+  
+
     const handleToggle = () => {
-        setTimeIsOn((prevIsOn) => {
-          
-          const newTimeFormat = !prevIsOn ? '12-hour' : '24-hour';
-          localStorage.setItem('timeFormat', newTimeFormat);
-          return !prevIsOn;
-        });
-      };
+      const newFormat = timeFormat === '12-hours' ? '24-hours' : '12-hours';
+      setTimeFormat(newFormat);
+      localStorage.setItem('timeFormat', newFormat);
+      setTimeIsOn(!timeisOn);
+      
+    };
 
 
    
@@ -69,7 +73,7 @@ const Settings = () => {
       if (pressure) setPressureUnit(pressure);
       if (precipitation) setPrecipitationUnit(precipitation);
       if (distance) setDistanceUnit(distance);
-      if (timeFormat) setTimeIsOn(timeFormat === '12-hour');
+      if (timeFormat) setTimeIsOn(timeFormat === '12-hours');
     }, []);
 
 
@@ -79,7 +83,7 @@ const Settings = () => {
   return (
     <div className='Settings'>
 
-
+      <h2 className='mobile_title'>Settings </h2>
     <div className="settings_wrapper">
 
 
